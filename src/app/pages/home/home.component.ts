@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  enterKey(event: string) {
+    console.log(event);
+  }
+
 }
