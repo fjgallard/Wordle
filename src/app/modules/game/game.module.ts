@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { KeyboardComponent } from './components/keyboard/keyboard.component';
+import { BoardComponent } from './components/board/board.component';
 
 
 
 @NgModule({
   declarations: [
-    KeyboardComponent
+    KeyboardComponent,
+    BoardComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    KeyboardComponent
+    KeyboardComponent,
+    BoardComponent
   ]
 })
 export class GameModule { }
