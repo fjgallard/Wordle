@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GameService } from '../../services/game.service';
 
 @Component({
   selector: 'app-board',
@@ -18,10 +19,14 @@ export class BoardComponent implements OnInit {
   // Array of words
   attempts: string[] = [];
 
-  constructor() {
+  constructor(private gameService: GameService) {
     for (let index = 0; index < this.NUMBER_OF_ATTEMPTS; index++) {
       this.attempts.push('');
     }
+
+    this.gameService.latestKey$.subscribe(key => {
+      console.log(key);
+    });
   }
 
   ngOnInit(): void {
