@@ -7,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
 
-  constructor() { }
+  private NUMBER_OF_ATTEMPTS = 6;
+
+  // The current index of attempt we are currently working on
+  currentAttempt = 0;
+
+  // Array of words
+  attempts: string[] = [];
+
+  constructor() {
+    for (let index = 0; index < this.NUMBER_OF_ATTEMPTS; index++) {
+      this.attempts.push('');
+    }
+  }
 
   ngOnInit(): void {
   }
