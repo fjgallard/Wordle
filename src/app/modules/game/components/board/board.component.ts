@@ -12,6 +12,9 @@ export class BoardComponent implements OnInit {
   // The current index of attempt we are currently working on
   currentAttempt = 0;
 
+  // Index of the tile we are changing
+  currentTile = 0;
+
   // Array of words
   attempts: string[] = [];
 

@@ -1,49 +1,8 @@
 <div class="board">
-  <div class="row">
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-  </div>
-
-  <div class="row">
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-  </div>
-
-  <div class="row">
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-  </div>
-
-  <div class="row">
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-  </div>
-
-  <div class="row">
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-  </div>
-
-  <div class="row">
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-    <div class="tile"></div>
-  </div>
+  <app-attempt
+  *ngFor="let attempt of attempts; let i = index"
+  [index]="i"
+  [currentTile]="currentTile"
+  [currentAttempt]="currentAttempt">
+  </app-attempt>
 </div>
