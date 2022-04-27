@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { KeyboardComponent } from './components/keyboard/keyboard.component';
 import { BoardComponent } from './components/board/board.component';
 import { AttemptComponent } from './components/attempt/attempt.component';
+import { GameComponent } from './pages/game/game.component';
+import { GameRoutingModule } from './game-routing.module';
 
 
 
@@ -10,10 +12,12 @@ import { AttemptComponent } from './components/attempt/attempt.component';
   declarations: [
     KeyboardComponent,
     BoardComponent,
-    AttemptComponent
+    AttemptComponent,
+    GameComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    GameRoutingModule
   ],
   exports: [
     KeyboardComponent,
