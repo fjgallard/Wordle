@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { GameModule } from '../game.module';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: GameModule
 })
 export class GameService {
 

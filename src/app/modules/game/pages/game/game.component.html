@@ -1,1 +1,17 @@
-<p>game works!</p>
+<div class="board">
+  <app-attempt
+  *ngFor="let attempt of attempts; let i = index"
+  [index]="i"
+  [currentTile]="currentTile"
+  [currentAttempt]="currentAttempt"
+  [currentWord]="attempts[i].word"
+  [currentWordStatus]="attempts[i].status">
+  </app-attempt>
+</div>
+
+<input
+type="text"
+maxlength="5"
+[value]="attempts[this.currentAttempt].word"
+(input)="inputWord($event)"
+(keyup.enter)="enterPressed()">
